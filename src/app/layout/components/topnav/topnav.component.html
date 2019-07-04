@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="fix-nav">
+  <button type="button" mat-icon-button class="visible-md" (click)="toggleSidebar()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <div class="nav-brand">
+      Kiu
+  </div>
+
+  <span class="nav-spacer"></span>
+
+  <button class="hidden-sm" mat-icon-button [matMenuTriggerFor]="profile">
+      <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #profile="matMenu">
+      <button mat-menu-item>
+          <mat-icon>settings</mat-icon>
+          <span>Configuraci&oacute;n</span>
+      </button>
+  </mat-menu>
+
+  <button mat-icon-button  [matMenuTriggerFor]="loggout">
+      <mat-icon>exit_to_app</mat-icon>
+  </button>
+  <mat-menu #loggout="matMenu" panelClass="login-menu">
+      <button mat-menu-item (click)="onLoggedout()" class="login-menu-text">
+          Salir
+      </button>
+  </mat-menu>
+</mat-toolbar>
+

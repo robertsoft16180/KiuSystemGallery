@@ -1,0 +1,15 @@
+<!--
+<mat-card class="photo-card">
+  <mat-card-header>
+    <mat-card-title>Photo Id: {{photo.id}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="photo.thumbnailUrl" alt="Photo.id" (click)="openModal(photo)">
+  <mat-card-content>
+    <p>
+      title: {{photo.title}}
+    </p>
+  </mat-card-content>
+
+</mat-card>
+ -->
+<img class="photo-card" mat-card-image [src]="photo.thumbnailUrl" alt="Photo.id" (dblclick)="openModal(photo)">

@@ -1,0 +1,16 @@
+<!--
+<mat-grid-list cols="4" rowHeight="4:4">
+
+  <mat-grid-tile *ngFor="let photo of (photos$() | async);">
+    <app-photo [photo]="photo"></app-photo>
+  </mat-grid-tile>
+
+</mat-grid-list> -->
+
+<div>Dar doble click para ver el detalle de la foto</div>
+
+<gridster [options]="options">
+  <gridster-item *ngFor="let item of layout" [item]="item">
+    <app-photo [photo]="item.photo"></app-photo>
+  </gridster-item>
+</gridster>
